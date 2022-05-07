@@ -1,5 +1,5 @@
 # What are Primitives?
-This article and videos is named "Reference vs Primitive Values".
+This article is named "Reference vs Primitive Values".
 
 So let's start - what are "Primitives"?
 
