@@ -154,7 +154,7 @@ You still have the old pointers, pointing to the old nested arrays/ objects!
 
 You'd have to manually clone every layer that you plan on working with. If you don't plan on changing these nested arrays or objects though, you don't need to clone them.
 
-Here's one more example (Try running the code one by one to see what's happening):
+## Here's one more example (Try running the code one by one to see what's happening):
 
 ```
 let data = {name: "Rahul", info: {age: "24", color: "black"}};
