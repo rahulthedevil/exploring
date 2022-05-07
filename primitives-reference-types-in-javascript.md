@@ -12,7 +12,7 @@ The age variable (you could also use let or const by the way) stores a number va
 Number values are called "primitive values" because they're very simple building blocks of JavaScript apps.
 
 Other simple core building blocks are:
-```
+```javascript
 var name = 'Max' // strings are primitives, too!
 var isMale = true // so are booleans
 So numbers, string, booleans - these are probably very well-known to you.
@@ -26,7 +26,7 @@ What are "reference types" then?
 
 Objects and Arrays!
 
-```
+```javascript
 var person = {
   name: 'Max',
   age: 28,
@@ -61,7 +61,7 @@ The fact that only pointers are stored on the stack for reference types matters 
 
 What's actually stored in the person variable in the following snippet?
 
-```
+```javascript
 var person = { name: 'Max' }
 Is it: a) The object ({ name: 'Max' })
 
@@ -75,7 +75,7 @@ c) A pointer to the name property?
 
 What does the following code spit out then?
 
-```
+```javascript
 var person = { name: 'Max' }
 var newPerson = person
 newPerson.name = 'Anna'
@@ -91,7 +91,7 @@ This is really important to understand! You're pointing at the same object, you 
 
 It's the same for arrays.
 
-```
+```javascript
 var hobbies = ['Sports', 'Cooking']
 var copiedHobbies = hobbies
 copiedHobbies.push('Music')
@@ -110,7 +110,7 @@ You got multiple ways of doing this - also depending on which kind of JavaScript
 # 1) Use the slice() method
 slice() is a standard array method provided by JavaScript. You can check out its full documentation here.
 
-```
+```javascript
 var hobbies = ['Sports', 'Cooking']
 var copiedHobbies = hobbies.slice()
 ```
@@ -119,7 +119,7 @@ It basically returns a new array which contains all elements of the old element,
 # 2) Use the spread operator
 If you're using ES6+, you can use the spread operator.
 
-```
+```javascript
 var hobbies = ['Sports', 'Cooking']
 var copiedHobbies = [...hobbies]
 ```
@@ -129,7 +129,7 @@ Here, you also create a new array (manually, by using []) and you then use the s
 # 1) Object.assign()
 You can use the Object.assign() syntax which is explained in greater detail here.
 
-```
+```javascript
 var person = { name: 'Max' }
 var copiedPerson = Object.assign({}, person)
 ```
@@ -137,7 +137,7 @@ This syntax creates a new object (the {} part) and assigns all properties of the
 
 # 2) Use the spread operator
 Just as with arrays, you can also use the spread operator on objects.
-```
+```javascript
 var person = { name: 'Max' }
 var copiedPerson = { ...person }
 ```
@@ -156,7 +156,7 @@ You'd have to manually clone every layer that you plan on working with. If you d
 
 ## Here's one more example (Try running the code one by one to see what's happening):
 
-```
+```javascript
 let data = {name: "Rahul", info: {age: "24", color: "black"}};
 
 console.log(data);
