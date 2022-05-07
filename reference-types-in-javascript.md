@@ -152,3 +152,27 @@ If you cloned array contains nested arrays or objects as elements or if your obj
 You still have the old pointers, pointing to the old nested arrays/ objects!
 
 You'd have to manually clone every layer that you plan on working with. If you don't plan on changing these nested arrays or objects though, you don't need to clone them.
+
+Here's one more example (Try running the code one by one to see what's happening):
+
+```
+let data = {name: "Rahul", info: {age: "24", color: "black"}};
+
+console.log(data);
+
+let data2 = data;
+
+data2.name = "Rahul in Data2";
+
+console.log(data, data2);
+
+let data3 = Object.assign({}, data);
+
+data3.name = "Rahul in data3";
+
+console.log(data3, data2, data);
+
+data3.info.age = "24 in data3"
+
+console.log(data3, data2, data);
+```
